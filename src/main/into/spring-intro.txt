@@ -1,0 +1,7 @@
+Spring Initializer:
+  - Allows to create spring boot applications and provides all the necessary libraries.
+
+Spring Boot Starter:
+  - Are a group of libraries that responds to the development needs .for example for rest api we have spring web starter etc ...
+
+
