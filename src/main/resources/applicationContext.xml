@@ -10,9 +10,10 @@
 
   <bean id="invoiceService"  class="org.example.service.InvoiceServicePrefix">
     <property name="invoiceRepository" ref="invoiceRepository" />
-    <property name="lastNumber" value="112" />
-    <property name="prefix" value="INV_" />
+    <property name="lastNumber" value="118" />
+    <property name="prefix" value="NUM_" />
   </bean>
+
 
   <bean  id="invoiceRepository" class="org.example.repository.InvoiceRepositoryDatabase"> </bean>
 
