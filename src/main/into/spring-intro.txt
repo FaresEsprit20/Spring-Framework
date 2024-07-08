@@ -5,3 +5,37 @@ Spring Boot Starter:
   - Are a group of libraries that responds to the development needs .for example for rest api we have spring web starter etc ...
 
 
+Spring Container:
+  - A Spring lightweight container refers to the core of the Spring Framework that manages the lifecycle of Java objects (beans).
+   It provides dependency injection and inversion of control capabilities, allowing for easier configuration and management of application components.
+
+
+Dependency Injection (DI) :
+  - in the context of Spring Framework refers to the mechanism where Spring manages and injects dependencies into beans.
+   It allows for loose coupling, promotes easier testing, and enhances flexibility by externalizing object dependencies from the code itself.
+
+
+Inversion of Control (IoC):
+  - is a programming principle where control over object creation and lifecycle management is delegated to a framework like Spring. In Spring,
+   IoC is implemented through Dependency Injection (DI), which decouples components, simplifies configuration, and enhances flexibility in application development.
+
+   Example:
+
+   Imagine you're building a car (your application). Traditionally, you would design and assemble every component of the car yourself, including the engine, transmission, and electronics. This is like tightly coupling all parts together, making it hard to replace or modify one part without affecting others.
+
+   Now, apply IoC and DI:
+
+   Inversion of Control (IoC): Instead of building each component yourself, you decide to delegate the assembly and integration of critical components to a specialized manufacturer (Spring Framework). This manufacturer knows how to build, configure, and integrate each part of the car (beans).
+
+   Dependency Injection (DI): When the time comes to integrate a new engine into your car, you specify what type of engine you need (dependency) and the manufacturer (Spring) provides it, ensuring it fits seamlessly into the car (application) without you having to handle all the details yourself.
+
+   In this analogy:
+
+   IoC is like delegating the control of assembly and integration to a specialized manufacturer (Spring).
+   DI is like specifying what components (dependencies) your car (application) needs, and having them provided and integrated for you by the manufacturer (Spring).
+
+ Bean:
+     - In the context of the Spring Framework, a Spring Bean is an object that is managed by the Spring IoC (Inversion of Control) container.
+       It is a Java object that is instantiated, configured, and managed by the Spring IoC container, which applies Dependency Injection (DI)
+       to inject dependencies and manage the bean's lifecycle.
+

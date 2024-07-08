@@ -4,7 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-  <bean id="" class=""> </bean>
+  <bean  class="org.example.controller.InvoiceControllerWeb">
+    <property name="invoiceService" ref="invoiceService" />
+  </bean>
+
+  <bean id="invoiceService"  class="org.example.service.InvoiceServicePrefix">
+    <property name="invoiceRepository" ref="invoiceRepository" />
+  </bean>
+
+  <bean  id="invoiceRepository" class="org.example.repository.InvoiceRepositoryDatabase"> </bean>
+
     
 
 </beans>
