@@ -2,20 +2,43 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-  <bean  class="org.example.controller.InvoiceControllerWeb">
-    <property name="invoiceService" ref="invoiceService" />
-  </bean>
-
-  <bean id="invoiceService"  class="org.example.service.InvoiceServicePrefix">
-    <property name="invoiceRepository" ref="invoiceRepository" />
-    <property name="lastNumber" value="118" />
-    <property name="prefix" value="NUM_" />
-  </bean>
+    http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byType">
 
 
-  <bean  id="invoiceRepository" class="org.example.repository.InvoiceRepositoryDatabase"> </bean>
+  <!-- Auto Wiring by Type : Spring container search for types  to inject automatically the dependencies -->
+    <bean  class="org.example.controller.InvoiceControllerWeb">
+    </bean>
+
+    <bean   class="org.example.service.InvoiceServicePrefix">
+      <property name="lastNumber" value="112" />
+      <property name="prefix" value="INV_" />
+    </bean>
+    <bean  id="invoiceRepository" class="org.example.repository.InvoiceRepositoryDatabase"> </bean>
+
+
+
+<!-- Auto Wiring by name : Spring container search for names to inject automatically the dependencies -->
+<!--  <bean  class="org.example.controller.InvoiceControllerWeb">-->
+<!--  </bean>-->
+
+<!--  <bean id="invoiceService"  class="org.example.service.InvoiceServicePrefix">-->
+<!--    <property name="lastNumber" value="112" />-->
+<!--    <property name="prefix" value="INV_" />-->
+<!--  </bean>-->
+  <!--  <bean  id="invoiceRepository" class="org.example.repository.InvoiceRepositoryDatabase"> </bean>-->
+
+
+
+<!--  <bean  class="org.example.controller.InvoiceControllerWeb">-->
+<!--    <property name="invoiceService" ref="invoiceService" />-->
+<!--  </bean>-->
+
+<!--  <bean id="invoiceService"  class="org.example.service.InvoiceServicePrefix">-->
+<!--    <property name="invoiceRepository" ref="invoiceRepository" />-->
+<!--    <property name="lastNumber" value="112" />-->
+<!--    <property name="prefix" value="INV_" />-->
+<!--  </bean>-->
+<!--  <bean  id="invoiceRepository" class="org.example.repository.InvoiceRepositoryDatabase"> </bean>-->
 
     
 
