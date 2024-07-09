@@ -9,6 +9,8 @@
 
   <context:annotation-config />
 
+  <!--  The Autowiring by default is By type-->
+
   <!-- Auto Wiring by Type : Spring container search for types  to inject automatically the dependencies -->
     <bean  class="org.example.controller.InvoiceControllerWeb">
     </bean>

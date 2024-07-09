@@ -3,9 +3,11 @@ package org.example.controller;
 
 import org.example.entity.Invoice;
 import org.example.service.InvoiceServiceInterface;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class InvoiceControllerWeb implements InvoiceControllerInterface {
 
+    @Autowired
     private InvoiceServiceInterface invoiceService;
 
     public InvoiceServiceInterface getInvoiceService() {

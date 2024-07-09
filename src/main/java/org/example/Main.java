@@ -12,7 +12,6 @@ public class Main {
         InvoiceControllerInterface invoiceController=context.getBean(InvoiceControllerInterface.class);
 
         invoiceController.createInvoice();
-
     }
 
 
