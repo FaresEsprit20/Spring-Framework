@@ -8,6 +8,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd" >
 
   <context:annotation-config />
+  <context:property-placeholder location="classpath:application.properties" />
 
   <!--  The Autowiring by default is By type-->
 
@@ -16,8 +17,8 @@
     </bean>
 
     <bean   class="org.example.service.InvoiceServicePrefix">
-      <property name="lastNumber" value="112" />
-      <property name="prefix" value="INV_" />
+<!--      <property name="lastNumber" value="112" />-->
+<!--      <property name="prefix" value="INV_" />-->
     </bean>
     <bean  id="invoiceRepository" class="org.example.repository.InvoiceRepositoryDatabase"> </bean>
 
