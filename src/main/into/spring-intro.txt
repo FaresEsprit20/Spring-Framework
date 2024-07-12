@@ -61,4 +61,10 @@ Inversion of Control (IoC):
  Spring automatically detects classes annotated with @Component and its specialized stereotypes (@Repository, @Service, @Controller, etc.),
  as well as other Spring-specific annotations (@Configuration, @RestController, etc.).
    Also in xml for example <context:component-scan base-package="org.example.repository.database"/>
+   For the xml method it is never recommended to scan the base package but to scan every package alone:
+  <context:component-scan base-package="org.example.controller.web"/>
+  <context:component-scan base-package="org.example.service.prefix"/>
+  <context:component-scan base-package="org.example.repository.database"/>
+
+
 
