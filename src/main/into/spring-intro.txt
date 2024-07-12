@@ -67,4 +67,15 @@ Inversion of Control (IoC):
   <context:component-scan base-package="org.example.repository.database"/>
 
 
+ @Configuration:
+  - is an annotation in Spring Framework used to declare a class as a source of bean definitions.
+     Classes annotated with @Configuration are typically used with @Bean methods to define and configure Spring beans.
+  - is specifically used to define beans in Spring's Java configuration style.
+   It's used on classes that provide bean definitions using @Bean methods.
+  - @Configuration classes are often used alongside @ComponentScan or <context:component-scan> in XML to enable component scanning and automatic bean detection.
+   @Component, on the other hand, directly marks a class as a Spring bean component.
+  -  In essence, @Configuration focuses on providing a mechanism to define beans and their configurations explicitly,
+    whereas @Component is a more general-purpose annotation for marking Spring-managed components that don't necessarily
+    define their configuration explicitly.
+
 
