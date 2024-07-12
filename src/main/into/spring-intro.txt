@@ -4,7 +4,6 @@ Spring Initializer:
 Spring Boot Starter:
   - Are a group of libraries that responds to the development needs .for example for rest api we have spring web starter etc ...
 
-
 Spring Container:
   - A Spring lightweight container refers to the core of the Spring Framework that manages the lifecycle of Java objects (beans).
    It provides dependency injection and inversion of control capabilities, allowing for easier configuration and management of application components.
@@ -13,7 +12,6 @@ Spring Container:
 Dependency Injection (DI) :
   - in the context of Spring Framework refers to the mechanism where Spring manages and injects dependencies into beans.
    It allows for loose coupling, promotes easier testing, and enhances flexibility by externalizing object dependencies from the code itself.
-
 
 Inversion of Control (IoC):
   - is a programming principle where control over object creation and lifecycle management is delegated to a framework like Spring. In Spring,
@@ -38,4 +36,29 @@ Inversion of Control (IoC):
      - In the context of the Spring Framework, a Spring Bean is an object that is managed by the Spring IoC (Inversion of Control) container.
        It is a Java object that is instantiated, configured, and managed by the Spring IoC container, which applies Dependency Injection (DI)
        to inject dependencies and manage the bean's lifecycle.
+
+ Immutable Design Pattern:
+     - The immutable design pattern in Spring utilizes constructor injection to create objects whose state is initialized upon instantiation and remains unchanged thereafter. For example, a User object is constructed with parameters like username, email, and role, ensuring these values are immutable for consistency and thread safety.
+
+    Key Points:
+
+   - Thread Safety: Constructor injection sets object state once, making it inherently thread-safe, crucial for concurrent environments.
+   - Predictable Behavior: Immutable objects via constructor injection promote clearer application logic by maintaining consistent state.
+   - Testability: Immutable objects simplify testing as their state remains fixed, facilitating reliable unit tests.
+   - Dependency Management: Constructor injection explicitly declares dependencies at creation, enhancing clarity and reducing accidental state changes.
+
+     Comparison:
+   - Setter Injection: Unlike setter injection, constructor injection enforces immutability by initializing state once, improving code reliability.
+   - @Autowired Annotation: Constructor injection provides clearer dependency visibility and control, aligning with best practices and minimizing unintended state modifications.
+
+  In summary, constructor injection is preferred in Spring for creating immutable objects due to its benefits in thread safety,
+   predictable behavior, testability, and dependency management.
+
+
+ Détection automatique des beans:
+
+  Cette opération ce fait grace a Component scan par 2 methodes soit par les annoations ou par xml :
+ Spring automatically detects classes annotated with @Component and its specialized stereotypes (@Repository, @Service, @Controller, etc.),
+ as well as other Spring-specific annotations (@Configuration, @RestController, etc.).
+   Also in xml for example <context:component-scan base-package="org.example.repository.database"/>
 

@@ -1,9 +1,12 @@
-package org.example.repository;
+package org.example.repository.database;
 
 
 import org.example.entity.Invoice;
+import org.example.repository.InvoiceRepositoryInterface;
+import org.springframework.stereotype.Repository;
 
-public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface{
+@Repository
+public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
 
     public void create(Invoice invoice){
         /*[…]

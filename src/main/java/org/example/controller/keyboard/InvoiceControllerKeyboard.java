@@ -1,23 +1,20 @@
-package org.example.controller;
+package org.example.controller.keyboard;
 
 
 
+import org.example.controller.InvoiceControllerInterface;
 import org.example.entity.Invoice;
 import org.example.service.InvoiceServiceInterface;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import java.util.Scanner;
 
-public class InvoiceControllerKeyboard implements InvoiceControllerInterface{
+@Controller
+public class InvoiceControllerKeyboard implements InvoiceControllerInterface {
 
-    @Autowired
-    private InvoiceServiceInterface invoiceService;
+    private final InvoiceServiceInterface invoiceService;
 
-    public InvoiceServiceInterface getInvoiceService() {
-        return invoiceService;
-    }
-
-    public void setInvoiceService(InvoiceServiceInterface invoiceService) {
+    public InvoiceControllerKeyboard(InvoiceServiceInterface invoiceService) {
         this.invoiceService = invoiceService;
     }
 
@@ -27,8 +24,8 @@ public class InvoiceControllerKeyboard implements InvoiceControllerInterface{
         String customerName=sc.nextLine();
         Invoice invoice=new Invoice();
         invoice.setCustomerName(customerName);
-
         invoiceService.createInvoice(invoice);
     }
+
 
 }

@@ -9,18 +9,22 @@
 
   <context:annotation-config />
   <context:property-placeholder location="classpath:application.properties" />
+  <context:component-scan base-package="org.example.controller.web"/>
+  <context:component-scan base-package="org.example.service.prefix"/>
+  <context:component-scan base-package="org.example.repository.database"/>
 
   <!--  The Autowiring by default is By type-->
 
   <!-- Auto Wiring by Type : Spring container search for types  to inject automatically the dependencies -->
-    <bean  class="org.example.controller.InvoiceControllerWeb">
-    </bean>
+<!--    Peuvent etre remplacée par les annotations comme @component, @ ....-->
+<!--    <bean  class="org.example.controller.InvoiceControllerWeb">-->
+<!--    </bean>-->
 
-    <bean   class="org.example.service.InvoiceServicePrefix">
+<!--    <bean   class="org.example.service.InvoiceServicePrefix">-->
 <!--      <property name="lastNumber" value="112" />-->
 <!--      <property name="prefix" value="INV_" />-->
-    </bean>
-    <bean  id="invoiceRepository" class="org.example.repository.InvoiceRepositoryDatabase"> </bean>
+<!--    </bean>-->
+<!--    <bean  id="invoiceRepository" class="org.example.repository.InvoiceRepositoryDatabase"> </bean>-->
 
 
 

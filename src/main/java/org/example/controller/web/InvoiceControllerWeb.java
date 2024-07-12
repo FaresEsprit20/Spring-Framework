@@ -1,22 +1,20 @@
-package org.example.controller;
+package org.example.controller.web;
 
 
+import org.example.controller.InvoiceControllerInterface;
 import org.example.entity.Invoice;
 import org.example.service.InvoiceServiceInterface;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class InvoiceControllerWeb implements InvoiceControllerInterface {
 
-    @Autowired
-    private InvoiceServiceInterface invoiceService;
+    private final InvoiceServiceInterface invoiceService;
 
-    public InvoiceServiceInterface getInvoiceService() {
-        return invoiceService;
-    }
-
-    public void setInvoiceService(InvoiceServiceInterface invoiceService) {
+    public InvoiceControllerWeb(InvoiceServiceInterface invoiceService) {
         this.invoiceService = invoiceService;
     }
+
 
     public void createInvoice(){
 

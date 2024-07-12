@@ -1,12 +1,15 @@
-package org.example.repository;
+package org.example.repository.memory;
 
 
 import org.example.entity.Invoice;
+import org.example.repository.InvoiceRepositoryInterface;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface{
+@Repository
+public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
 
     private static List<Invoice> invoices=new ArrayList<>();
 
