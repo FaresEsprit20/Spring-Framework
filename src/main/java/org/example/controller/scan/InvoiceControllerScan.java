@@ -6,7 +6,7 @@ import org.example.entity.Invoice;
 import org.example.service.InvoiceServiceInterface;
 import org.springframework.stereotype.Controller;
 
-@Controller
+//@Controller
 public class InvoiceControllerScan implements InvoiceControllerInterface {
 
     private final InvoiceServiceInterface invoiceService;

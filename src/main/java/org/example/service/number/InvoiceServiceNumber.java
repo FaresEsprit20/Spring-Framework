@@ -6,7 +6,7 @@ import org.example.repository.InvoiceRepositoryInterface;
 import org.example.service.InvoiceServiceInterface;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class InvoiceServiceNumber implements InvoiceServiceInterface {
     private static long lastNumber=0L;
     private final InvoiceRepositoryInterface invoiceRepository;

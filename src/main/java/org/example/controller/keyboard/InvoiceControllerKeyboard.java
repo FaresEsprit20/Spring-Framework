@@ -9,10 +9,11 @@ import org.springframework.stereotype.Controller;
 
 import java.util.Scanner;
 
-@Controller
+//@Controller
 public class InvoiceControllerKeyboard implements InvoiceControllerInterface {
 
     private final InvoiceServiceInterface invoiceService;
+
 
     public InvoiceControllerKeyboard(InvoiceServiceInterface invoiceService) {
         this.invoiceService = invoiceService;

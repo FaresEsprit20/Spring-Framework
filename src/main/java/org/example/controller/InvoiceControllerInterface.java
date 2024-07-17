@@ -6,4 +6,5 @@ import org.example.service.InvoiceServiceInterface;
 public interface InvoiceControllerInterface {
 
     void createInvoice();
+
 }
