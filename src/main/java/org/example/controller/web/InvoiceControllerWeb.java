@@ -24,4 +24,9 @@ public class InvoiceControllerWeb implements InvoiceControllerInterface {
 
         invoiceService.createInvoice(invoice);
     }
+
+    public void displayHome() {
+        
+    }
+
 }
